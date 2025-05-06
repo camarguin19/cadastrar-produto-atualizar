@@ -8,20 +8,22 @@ $result = $conn->query($sql);
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Catálogo de Produtos</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <h1>Catálogo de Produtos</h1>
-    
-    <!-- Link para adicionar um novo produto -->
+
+
     <a href="add_produto.php">[Adicionar Novo Produto]</a>
-    
-    <!-- Área para listagem dos produtos -->
+
+
     <ul>
-        
+
         <?php while ($row = $result->fetch_assoc()): ?>
             <li>
                 <strong><?php echo $row['name']; ?></strong> - R$ <?php echo $row['price']; ?>
@@ -34,4 +36,5 @@ $result = $conn->query($sql);
         <?php endwhile; ?>
     </ul>
 </body>
+
 </html>

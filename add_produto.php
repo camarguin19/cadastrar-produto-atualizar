@@ -18,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-// Aqui você processará o formulário para inserir um novo produto
 ?>
 
 <!DOCTYPE html>

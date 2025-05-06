@@ -9,24 +9,25 @@ if (isset($_POST['id'])) {
     if ($conn->query($sql) === TRUE) {
         header("location: index.php");
         exit();
-    } else{
-        echo "Erro ao atualizar: ". $conn->error;
+    } else {
+        echo "Erro ao atualizar: " . $conn->error;
     }
-}else {
+} else {
     echo "ID do produto inválido";
 }
 
-// Aqui você buscará o produto pelo ID e preencherá o formulário
-// Exemplo: $product_id = (int) $_GET['id'];
+
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Editar Produto</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <h1>Editar Produto</h1>
     <form action="update_produto.php?id=<?php echo $produto_id; ?>" method="POST">
@@ -41,4 +42,5 @@ if (isset($_POST['id'])) {
     <br>
     <a href="index.php">Voltar ao Catálogo</a>
 </body>
+
 </html>
